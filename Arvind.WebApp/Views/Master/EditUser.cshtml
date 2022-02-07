@@ -1,0 +1,86 @@
+﻿@model UserEditVM
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Edit User</h3>
+            </div>
+
+            <form role="form" asp-action="EditUser" method="post">
+                <div class="card-body">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" readonly />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="InstituteId" class="control-label"></label>
+                        <select asp-for="InstituteId" asp-items="@ViewBag.InstituteId" class="form-control">
+                            <option value="">-Select-</option>
+                        </select>
+                        <span asp-validation-for="InstituteId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EmployeeName" class="control-label"></label>
+                        <input asp-for="EmployeeName" class="form-control" />
+                        <span asp-validation-for="EmployeeName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Gender" class="control-label"></label>
+                        @*<input asp-for="Gender" class="form-control" />*@
+                        <select class="form-control" asp-items="Html.GetEnumSelectList<GenderList>()" asp-for="Gender">
+                            <option value="">-Gender-</option>
+                        </select>
+                        <span asp-validation-for="Gender" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DateOfBirth" class="control-label"></label>
+                        <input asp-for="DateOfBirth" class="form-control" />
+                        <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                    </div>
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Update</button>
+                    <a asp-action="listuser" asp-controller="master" class="btn btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="col-md-6">
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">User Role</h3>
+            </div>
+            <div class="card-body p-2">
+                @if (Model.Roles.Any())
+                {
+                    foreach(var role in Model.Roles)
+                    {
+                        <h4>@role</h4>
+                    }
+                }
+                else
+                {
+                    <h3>None at the moment.</h3>
+                }
+            </div>
+            <div class="card-footer p-2">
+                <a asp-controller="master" asp-action="ManageUserRole" asp-route-userId="@Model.Id" class="btn btn-sm btn-info">Manage Role</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

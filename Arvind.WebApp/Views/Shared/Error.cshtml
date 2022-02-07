@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Error";
+    string errTitle = (string)ViewBag.ErrorTitle;
+}
+
+
+
+
+@if (!String.IsNullOrEmpty(errTitle))
+{
+    <h1 class="text-danger">@ViewBag.ErrorTitle</h1>
+    <h3 class="text-danger">@ViewBag.ErrorMsg</h3>
+}
+else
+{
+    <h1 class="text-danger">Error.</h1>
+    <h2 class="text-danger">An error occurred while processing your request.</h2>
+}

@@ -1,0 +1,10 @@
+D:\Office_Works\ArvindProject\Arvind.UtilityTools\bin\Release\netstandard2.1\Arvind.UtilityTools.deps.json
+D:\Office_Works\ArvindProject\Arvind.UtilityTools\bin\Release\netstandard2.1\Arvind.UtilityTools.dll
+D:\Office_Works\ArvindProject\Arvind.UtilityTools\bin\Release\netstandard2.1\Arvind.UtilityTools.pdb
+D:\Office_Works\ArvindProject\Arvind.UtilityTools\obj\Release\netstandard2.1\Arvind.UtilityTools.AssemblyInfoInputs.cache
+D:\Office_Works\ArvindProject\Arvind.UtilityTools\obj\Release\netstandard2.1\Arvind.UtilityTools.AssemblyInfo.cs
+D:\Office_Works\ArvindProject\Arvind.UtilityTools\obj\Release\netstandard2.1\Arvind.UtilityTools.csproj.CoreCompileInputs.cache
+D:\Office_Works\ArvindProject\Arvind.UtilityTools\obj\Release\netstandard2.1\Arvind.UtilityTools.dll
+D:\Office_Works\ArvindProject\Arvind.UtilityTools\obj\Release\netstandard2.1\Arvind.UtilityTools.pdb
+D:\Office_Works\ArvindProject\Arvind.UtilityTools\obj\Release\netstandard2.1\Arvind.UtilityTools.csproj.AssemblyReference.cache
+D:\Office_Works\ArvindProject\Arvind.UtilityTools\obj\Release\netstandard2.1\Arvind.UtilityTools.GeneratedMSBuildEditorConfig.editorconfig

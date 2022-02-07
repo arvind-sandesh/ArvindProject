@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>dd1fcdca-3830-469b-856c-884fbfb8122c</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>      
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.2" />  
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.2" />      
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.2" />      
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Arvind.EmailService\Arvind.EmailService.csproj" />
+    <ProjectReference Include="..\Arvind.LogService\Arvind.LogService.csproj" />
+    <ProjectReference Include="..\Arvind.Repository\Arvind.Repository.csproj" />
+    <ProjectReference Include="..\Arvind.UtilityTools\Arvind.UtilityTools.csproj" />
+  </ItemGroup>
+
+</Project>

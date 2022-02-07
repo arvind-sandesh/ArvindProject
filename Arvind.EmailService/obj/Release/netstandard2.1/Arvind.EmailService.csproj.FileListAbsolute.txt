@@ -1,0 +1,13 @@
+D:\Office_Works\ArvindProject\Arvind.EmailService\bin\Release\netstandard2.1\Arvind.EmailService.deps.json
+D:\Office_Works\ArvindProject\Arvind.EmailService\bin\Release\netstandard2.1\Arvind.EmailService.dll
+D:\Office_Works\ArvindProject\Arvind.EmailService\bin\Release\netstandard2.1\Arvind.EmailService.pdb
+D:\Office_Works\ArvindProject\Arvind.EmailService\bin\Release\netstandard2.1\Arvind.UtilityTools.dll
+D:\Office_Works\ArvindProject\Arvind.EmailService\bin\Release\netstandard2.1\Arvind.UtilityTools.pdb
+D:\Office_Works\ArvindProject\Arvind.EmailService\obj\Release\netstandard2.1\Arvind.EmailService.AssemblyInfoInputs.cache
+D:\Office_Works\ArvindProject\Arvind.EmailService\obj\Release\netstandard2.1\Arvind.EmailService.AssemblyInfo.cs
+D:\Office_Works\ArvindProject\Arvind.EmailService\obj\Release\netstandard2.1\Arvind.EmailService.csproj.CoreCompileInputs.cache
+D:\Office_Works\ArvindProject\Arvind.EmailService\obj\Release\netstandard2.1\Arvind.EmailService.csproj.CopyComplete
+D:\Office_Works\ArvindProject\Arvind.EmailService\obj\Release\netstandard2.1\Arvind.EmailService.dll
+D:\Office_Works\ArvindProject\Arvind.EmailService\obj\Release\netstandard2.1\Arvind.EmailService.pdb
+D:\Office_Works\ArvindProject\Arvind.EmailService\obj\Release\netstandard2.1\Arvind.EmailService.csproj.AssemblyReference.cache
+D:\Office_Works\ArvindProject\Arvind.EmailService\obj\Release\netstandard2.1\Arvind.EmailService.GeneratedMSBuildEditorConfig.editorconfig

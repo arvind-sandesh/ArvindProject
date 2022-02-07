@@ -1,0 +1,90 @@
+﻿@using Microsoft.Extensions.Configuration
+@using Microsoft.AspNetCore.Identity
+
+@inject IConfiguration Configuration
+@inject SignInManager<AppUser> SignInManager
+@inject UserManager<AppUser> UserManager
+
+<aside class="main-sidebar sidebar-light-primary elevation-2">
+    <!-- Brand Logo -->
+    <a href="~/" class="brand-link">
+        <img src="~/images/@Configuration.GetSection("GlobalSettings")["LogoSm"]" alt="AdminLTE Logo" class="brand-image img-circle elevation-1" />
+        <span class="brand-text font-weight-light">@Configuration.GetSection("GlobalSettings")["AppName-Short"]</span>
+    </a>
+
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <!-- Sidebar user (optional) -->
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <div class="user-panel mt-2 pb-1 mb-1 d-flex">
+                <div class="image" style="padding-left: .2rem;">
+                    <img src="~/dist/img/user2-160x160.jpg" class="img-circle elevation-1" alt="User Image">
+                </div>
+                <div class="info">
+                    @*@User.Claims.FirstOrDefault(c => c.Type == "fullname").Value@User.Identity.Name*@
+
+                    <a class="d-block" asp-area="" asp-action="ChangePassword" asp-controller="secure" title="Change your current password!">@User.Claims.FirstOrDefault(c => c.Type == "fullname").Value</a>
+
+                    <form class="form-inline float-right" asp-area="" asp-controller="secure" asp-action="Logout">
+                        <button type="submit" class="btn btn-danger btn-sm mt-2" style="padding: .02rem .5rem;"><i class="fa fa-sign-out-alt"></i> Logout</button>
+                    </form>
+                </div>
+            </div>
+        }
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
+                <li class="nav-item">
+                    <a href="~/" class="nav-link">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-clinic-medical"></i>
+                        <p>
+                            Master Setup
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a asp-action="CreateRole" asp-controller="Master" class="nav-link">
+                                <i class="fas fa-user-tag nav-icon"></i>
+                                <p>Create Role</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-action="ListRole" asp-controller="Master" class="nav-link">
+                                <i class="fas fa-user-circle nav-icon"></i>
+                                <p>List Role</p>
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a asp-action="CreateUser" asp-controller="secure" class="nav-link">
+                                <i class="fas fa-user nav-icon"></i>
+                                <p>Create Employee</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-action="ListUser" asp-controller="master" class="nav-link">
+                                <i class="fas fa-users nav-icon"></i>
+                                <p>List Employee</p>
+                            </a>
+                        </li>                       
+                    </ul>
+                </li>              
+
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>

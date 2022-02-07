@@ -1,0 +1,15 @@
+D:\Office_Works\ArvindProject\Arvind.Repository\bin\Release\netstandard2.1\Arvind.Repository.deps.json
+D:\Office_Works\ArvindProject\Arvind.Repository\bin\Release\netstandard2.1\Arvind.Repository.dll
+D:\Office_Works\ArvindProject\Arvind.Repository\bin\Release\netstandard2.1\Arvind.Repository.pdb
+D:\Office_Works\ArvindProject\Arvind.Repository\bin\Release\netstandard2.1\Arvind.Contract.dll
+D:\Office_Works\ArvindProject\Arvind.Repository\bin\Release\netstandard2.1\Arvind.Entities.dll
+D:\Office_Works\ArvindProject\Arvind.Repository\bin\Release\netstandard2.1\Arvind.Contract.pdb
+D:\Office_Works\ArvindProject\Arvind.Repository\bin\Release\netstandard2.1\Arvind.Entities.pdb
+D:\Office_Works\ArvindProject\Arvind.Repository\obj\Release\netstandard2.1\Arvind.Repository.AssemblyInfoInputs.cache
+D:\Office_Works\ArvindProject\Arvind.Repository\obj\Release\netstandard2.1\Arvind.Repository.AssemblyInfo.cs
+D:\Office_Works\ArvindProject\Arvind.Repository\obj\Release\netstandard2.1\Arvind.Repository.csproj.CoreCompileInputs.cache
+D:\Office_Works\ArvindProject\Arvind.Repository\obj\Release\netstandard2.1\Arvind.Repository.csproj.CopyComplete
+D:\Office_Works\ArvindProject\Arvind.Repository\obj\Release\netstandard2.1\Arvind.Repository.dll
+D:\Office_Works\ArvindProject\Arvind.Repository\obj\Release\netstandard2.1\Arvind.Repository.pdb
+D:\Office_Works\ArvindProject\Arvind.Repository\obj\Release\netstandard2.1\Arvind.Repository.csproj.AssemblyReference.cache
+D:\Office_Works\ArvindProject\Arvind.Repository\obj\Release\netstandard2.1\Arvind.Repository.GeneratedMSBuildEditorConfig.editorconfig

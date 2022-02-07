@@ -1,0 +1,107 @@
+﻿@model List<Employee>
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title m-0">User List</h3>
+        <div class="card-tools float-right">
+            <div class="form-group m-0">
+                <form asp-action="ListUser" id="form1">
+                    <div class="form-group mb-0">
+                        <select id="ddl_institute" name="id" asp-items="@ViewBag.InstituteId" class="form-control">
+                            <option value="">-Institute-</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body table-responsive p-0" style="height: 500px;">
+        <table class="table table-head-fixed text-nowrap">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirstOrDefault().Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirstOrDefault().EmployeeName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirstOrDefault().DateOfBirth)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirstOrDefault().Gender)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirstOrDefault().Email)
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EmployeeName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DateOfBirth)
+                        </td>
+                        <td>
+                            @*@Html.DisplayFor(modelItem => item.Gender)*@
+                            <select asp-items="Html.GetEnumSelectList<GenderList>()" asp-for="@item.Gender" disabled>
+                                <option value="">-Gender-</option>
+                            </select>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                    </tr>
+                    <tr class="bg-gradient-light">
+                        <td colspan="100%" class="p-0">
+                            <table class="table-borderless m-0 p-0">
+                                <tr>
+                                    <td>
+                                        <a asp-action="EditUser" asp-controller="master" asp-route-id="@item.Id" class="btn btn-sm btn-primary">Edit</a>
+                                    </td>
+                                <td>
+                                    <form method="post" asp-action="DeleteUser" asp-controller="master" asp-route-id="@item.Id">
+                                        <span id="confirmDeleteSpan_@item.Id" style="display:none">
+                                            <span>Are you sure to delete?</span>
+                                            <button type="submit" class="btn btn-sm btn-danger">Yes</button>
+                                            <a href="#" class="btn btn-sm btn-primary" onclick="confirmDelete('@item.Id',false)">No</a>
+                                        </span>
+                                        <span id="deleteSpan_@item.Id">
+                                            <a href="#" class="btn btn-sm btn-warning" onclick="confirmDelete('@item.Id',true)">Delete</a>
+                                        </span>
+                                    </form>
+                                    </td></tr>
+                            </table>
+
+                         
+                            
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <!-- /.card-body -->
+</div>
+
+@section Scripts {
+    <script>
+        $(function () {
+            $("#ddl_institute").on("change", function () {
+                $("#form1").submit();
+            });
+        });
+
+        
+
+    </script>
+
+}

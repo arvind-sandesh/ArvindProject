@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "2d431fa3-3e0f-4acf-b067-0a3cd7440238": {
+      "ProjectGuid": "2d431fa3-3e0f-4acf-b067-0a3cd7440238",
+      "DisplayName": "Arvind.UtilityTools",
+      "ColorIndex": 0
+    },
+    "32331224-169a-425d-99bb-d7d7dcfae419": {
+      "ProjectGuid": "32331224-169a-425d-99bb-d7d7dcfae419",
+      "DisplayName": "Arvind.Repository",
+      "ColorIndex": 1
+    },
+    "fd15a162-d43e-4a00-8492-d16a55534323": {
+      "ProjectGuid": "fd15a162-d43e-4a00-8492-d16a55534323",
+      "DisplayName": "Arvind.Entities",
+      "ColorIndex": 2
+    },
+    "1fc930ba-8232-44fa-a127-cc0fc7514647": {
+      "ProjectGuid": "1fc930ba-8232-44fa-a127-cc0fc7514647",
+      "DisplayName": "Arvind.EmailService",
+      "ColorIndex": 3
+    },
+    "66dc0d71-eea8-4268-b7f9-20c2d2bb0331": {
+      "ProjectGuid": "66dc0d71-eea8-4268-b7f9-20c2d2bb0331",
+      "DisplayName": "Arvind.Contract",
+      "ColorIndex": 4
+    },
+    "40f9ed42-90df-42d9-88e9-1c0334e87a5e": {
+      "ProjectGuid": "40f9ed42-90df-42d9-88e9-1c0334e87a5e",
+      "DisplayName": "Arvind.WebApp",
+      "ColorIndex": 5
+    },
+    "281386f1-66d3-4bb4-8f80-2a584cb99924": {
+      "ProjectGuid": "281386f1-66d3-4bb4-8f80-2a584cb99924",
+      "DisplayName": "Arvind.LogService",
+      "ColorIndex": 6
+    }
+  },
+  "NextColorIndex": 7
+}

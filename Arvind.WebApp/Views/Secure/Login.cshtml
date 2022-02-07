@@ -1,0 +1,55 @@
+﻿@inject IConfiguration Configuration
+@model LoginVM
+
+<div class="hold-transition login-page">
+    <div class="login-box">
+        <div class="login-logo">
+            <img src="~/images/@Configuration.GetSection("GlobalSettings")["LogoSm"]" alt="Logo" class="brand-image img-circle elevation-1" style="height:100px" /><br />
+            <a href="~/">@Configuration.GetSection("GlobalSettings")["AppName-Short"]</a>
+        </div>
+        <!-- /.login-logo --> 
+        <div class="card">
+            <div class="card-body login-card-body">
+                <p class="login-box-msg">Sign in to start your session</p>
+
+                <form asp-action="Login" asp-route-returnUrl="@ViewData["ReturnUrl"]">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group mb-3">
+                        <input asp-for="Email" class="form-control" placeholder="Email" />  
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input asp-for="Password" class="form-control" placeholder="Password" />                        
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="icheck-primary">
+                                <input id="remember" class="checkbox" asp-for="RememberMe" />
+                                <label for="remember">
+                                    Remember Me
+                                </label>
+                            </div>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                </form>
+
+                <p class="mb-1">
+                    <a asp-controller="secure" asp-action="ForgotPassword">I forgot my password</a>
+                </p>
+                <p class="mb-0">
+                    <a asp-controller="secure" asp-action="ReConfirmEmail">Re-Verify your Email!</a>
+                </p>
+            </div>
+            <!-- /.login-card-body -->
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,41 @@
+﻿@model List<UserRolesVM>
+@{
+    var userId = ViewBag.userId;
+}
+
+
+<div class="row">
+<div class="col-md-6 offset-md-3">
+    <form method="post" asp-action="ManageUserRole" asp-controller="master" asp-route-userId="@userId">
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Manage User Roles</h3>
+            </div>
+            <div class="card-body">
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    <input type="hidden" asp-for="@Model[i].RoleId" />
+                    <input type="hidden" asp-for="@Model[i].RoleName" />
+
+                    <div class="icheck-primary">
+                        <input asp-for="@Model[i].IsSelected" class="checkbox" />
+                        <label asp-for="@Model[i].IsSelected">
+                            @Model[i].RoleName
+                        </label>
+                    </div>
+                }
+
+                <div asp-validation-summary="All" class="text-danger"></div>
+            </div>
+            <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Update</button>
+                <a class="btn btn-secondary" asp-action="EditUser" asp-controller="master" asp-route-Id="@userId">Cancel</a>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

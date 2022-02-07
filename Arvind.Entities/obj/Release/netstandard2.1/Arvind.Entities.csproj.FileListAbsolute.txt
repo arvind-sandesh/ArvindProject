@@ -1,0 +1,10 @@
+D:\Office_Works\ArvindProject\Arvind.Entities\bin\Release\netstandard2.1\Arvind.Entities.deps.json
+D:\Office_Works\ArvindProject\Arvind.Entities\bin\Release\netstandard2.1\Arvind.Entities.dll
+D:\Office_Works\ArvindProject\Arvind.Entities\bin\Release\netstandard2.1\Arvind.Entities.pdb
+D:\Office_Works\ArvindProject\Arvind.Entities\obj\Release\netstandard2.1\Arvind.Entities.AssemblyInfoInputs.cache
+D:\Office_Works\ArvindProject\Arvind.Entities\obj\Release\netstandard2.1\Arvind.Entities.AssemblyInfo.cs
+D:\Office_Works\ArvindProject\Arvind.Entities\obj\Release\netstandard2.1\Arvind.Entities.csproj.CoreCompileInputs.cache
+D:\Office_Works\ArvindProject\Arvind.Entities\obj\Release\netstandard2.1\Arvind.Entities.dll
+D:\Office_Works\ArvindProject\Arvind.Entities\obj\Release\netstandard2.1\Arvind.Entities.pdb
+D:\Office_Works\ArvindProject\Arvind.Entities\obj\Release\netstandard2.1\Arvind.Entities.csproj.AssemblyReference.cache
+D:\Office_Works\ArvindProject\Arvind.Entities\obj\Release\netstandard2.1\Arvind.Entities.GeneratedMSBuildEditorConfig.editorconfig
