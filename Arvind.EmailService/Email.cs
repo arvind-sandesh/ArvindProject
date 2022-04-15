@@ -12,21 +12,14 @@ namespace Arvind.EmailService
     public class Email : IEmailSender
     {
         private readonly EmailConfiguration emailConfig;
-
         public Email(EmailConfiguration emailConfig)
         {
             this.emailConfig = emailConfig;
         }
-
-        public void SendEmail(Message message)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool SendEmail1(Message message)
+        public bool SendEmail(Message message)
         {
             bool res = false;
-            string pwd = Arvind.UtilityTools.Tools.Decrypt(emailConfig.Password);
+            string pwd = UtilityTools.Tools.Decrypt(emailConfig.Password);
             SmtpClient MailClient = new SmtpClient();
             MailClient.Host = emailConfig.SmtpServer;
             MailClient.Port = emailConfig.Port;   // 587;//465; 465 //25 for net4india
